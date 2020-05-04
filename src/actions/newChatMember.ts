@@ -16,7 +16,14 @@ export default (): Middleware<IContextMessage> => async (ctx) => {
     const user = (await User.findOne({ id: u.id })) ?? await User.default(u);
 
     if (!user.beenWelcomed && ctx.chat.id != -1001039334478) {
-      await ctx.reply(`${user.getTag()}\n\n${text}`, { parse_mode: 'HTML' });
+      await ctx.reply(`${user.getTag()}\n\n${text}`, { 
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: 'Обязательно к ознакомлению', url: 'https://telegra.ph/Korisn%D1%96-posilannya-dlya-ab%D1%96tur%D1%96yenta-F%D0%86OT-05-04' }],
+          ],
+        },
+      });
 
       user.beenWelcomed = true;
       await user.save();
