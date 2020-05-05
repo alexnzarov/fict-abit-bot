@@ -9,13 +9,18 @@ export interface ILink {
 const links: ILink[] = [
   {
     goal: null,
+    title: 'Каталог полезной информации ⭐️\n',
+    url: 'https://telegra.ph/Korisn%D1%96-posilannya-dlya-ab%D1%96tur%D1%96yenta-F%D0%86OT-05-04'
+  },
+  {
+    goal: null,
     title: 'КПИшный интернет ⭐️',
     url: 'https://telegra.ph/KPIshnyj-internet-v-telegramme-05-28'
   },
   {
     goal: null,
-    title: 'Каталог полезной информации ⭐️\n',
-    url: 'https://telegra.ph/Korisn%D1%96-posilannya-dlya-ab%D1%96tur%D1%96yenta-F%D0%86OT-05-04'
+    title: 'КПИшный интернет №2 ⭐️',
+    url: 'https://t.me/kpiweb'
   },
 
   /*

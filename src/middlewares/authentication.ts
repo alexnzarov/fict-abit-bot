@@ -1,6 +1,7 @@
 import { Middleware } from "telegraf";
 import { IContextMessage } from "../core/context";
 import { User } from "../db/entities/User";
+import logger from "../core/logger";
 
 export default (): Middleware<IContextMessage> => async (ctx, next) => {
   const { from } = ctx;
@@ -15,7 +16,7 @@ export default (): Middleware<IContextMessage> => async (ctx, next) => {
     user.firstName = from.first_name;
     user.lastName = from.last_name;
 
-    user.save().catch(e => console.log(`Failed to update information about the user [${from.id}]: ${e}`));
+    user.save().catch(e => logger.error(`Failed to update information about the user [${from.id}]: ${e}`));
   }
 
   ctx.user = user;
