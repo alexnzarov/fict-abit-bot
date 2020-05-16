@@ -9,7 +9,13 @@ export interface ILink {
 const links: ILink[] = [
   {
     goal: null,
-    title: 'Каталог полезной информации ⭐️\n',
+    title: 'Общая флудилка (@fict_talk)\n',
+    url: 'https://t.me/fict_talk',
+  },
+
+  {
+    goal: null,
+    title: 'Каталог полезной информации ⭐️',
     url: 'https://telegra.ph/Korisn%D1%96-posilannya-dlya-ab%D1%96tur%D1%96yenta-F%D0%86OT-05-04'
   },
   {
@@ -19,7 +25,7 @@ const links: ILink[] = [
   },
   {
     goal: null,
-    title: 'КПИшный интернет №2 ⭐️',
+    title: 'КПИшный интернет №2 ⭐️\n',
     url: 'https://t.me/kpiweb'
   },
 
