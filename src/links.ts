@@ -64,11 +64,6 @@ const links: ILink[] = [
   */
   {
     goal: ResponseGoal.SPECIALTY,
-    title: 'Что за "126" специальность',
-    url: 'https://telegra.ph/Informacionnye-sistemy-i-tehnologii-07-18',
-  },
-  {
-    goal: ResponseGoal.SPECIALTY,
     title: 'Откровенный разговор про 123 специальность',
     url: 'https://telegra.ph/V%D1%96dverta-rozmova-pro-123-na-F%D0%86OT%D1%96-04-11',
   },
