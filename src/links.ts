@@ -69,6 +69,11 @@ const links: ILink[] = [
   },
   {
     goal: ResponseGoal.SPECIALTY,
+    title: 'Полный гайд про 126 специальность на ФИВТе',
+    url: 'https://telegra.ph/126-specialnost-08-01'
+  },
+  {
+    goal: ResponseGoal.SPECIALTY,
     title: 'Откровенный разговор про 123 специальность на ФИВТе',
     url: 'https://telegra.ph/V%D1%96dverta-rozmova-pro-123-na-F%D0%86OT%D1%96-04-11',
   },
