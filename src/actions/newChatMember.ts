@@ -20,6 +20,7 @@ export default (): Middleware<IContextMessage> => async (ctx) => {
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
+            [{ text: 'Правила чата', url: 'https://telegra.ph/Abiturient-FIVT-08-05' }],
             [{ text: 'Обязательно к ознакомлению', url: 'https://telegra.ph/Korisn%D1%96-posilannya-dlya-ab%D1%96tur%D1%96yenta-F%D0%86OT-05-04' }],
           ],
         },
