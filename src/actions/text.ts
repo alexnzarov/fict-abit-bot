@@ -10,8 +10,12 @@ export const buildReply = (responses: Response[]) => responses.map(r => `${r.rep
 const getResponses = (text) => expressions.filter(e => e.match(text));
 
 export default (): Middleware<IContextMessage> => async (ctx) => {
-  const { text, message_id } = ctx.message;
+  const { text, message_id, reply_to_message, from } = ctx.message;
   const responses = getResponses(text);
+
+  if (from.username === 'alegator1209' && reply_to_message && reply_to_message.from.username === 'fict_abit_bot' && Math.random() <= 0.05) {
+    await ctx.reply('Гарна робота, Олег', { reply_to_message_id: message_id });
+  }
 
   responses.forEach(r => Reply.create({ goal: r.goal, message: text }).save());
 
