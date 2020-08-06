@@ -13,7 +13,7 @@ export default (): Middleware<IContextMessage> => async (ctx) => {
   const { text, message_id, reply_to_message, from } = ctx.message;
   const responses = getResponses(text);
 
-  if (from.username === 'alegator1209' && reply_to_message && reply_to_message.from.username === 'fict_abit_bot' && Math.random() <= 0.05) {
+  if (from.username === 'alegator1209' && text.trim().toLowerCase() == 'дороу' && reply_to_message && reply_to_message.from.username === 'fict_abit_bot' && Math.random() <= 0.05) {
     await ctx.reply('Гарна робота, Олег', { reply_to_message_id: message_id });
   }
 
