@@ -21,7 +21,7 @@ export default (): Middleware<IContextMessage> => async (ctx) => {
 
   // should not reply in fictonline chat
   if (responses.length > 0 && ctx.chat.id != -1001039334478) {
-    const replyText = `<b>Мне кажется, что я могу помочь тебе с этим.</b>\n\n${buildReply(responses)}`;
-    await ctx.reply(replyText, { reply_to_message_id: message_id, parse_mode: 'HTML', disable_web_page_preview: true });
+    //const replyText = `<b>Мне кажется, что я могу помочь тебе с этим.</b>\n\n${buildReply(responses)}`;
+    //await ctx.reply(replyText, { reply_to_message_id: message_id, parse_mode: 'HTML', disable_web_page_preview: true });
   }
 };
